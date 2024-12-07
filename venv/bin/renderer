@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' /home/duplesse/Bureau/Cours_Info_L3/Inf_371_Informatique_decisionelle_et_Fouille_de_Données_I/Ec1_Informatique_decisionnelle/Tp/avocado_analytics/venv/bin/python "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from dash.development.build_process import renderer
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(renderer())
